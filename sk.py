@@ -4,3 +4,4 @@ s = input()if len(s) == 9 or len(s) ==10:
 else:    print("NO")
 print('hszxfcgvhjk')
 print('  ')
+print('iukythdr')
