@@ -1,17 +1,4 @@
-import sys
-
-sys.setrecursionlimit(10**8)
-a = list(map(int, input().split()))
-cnt = 0
-def f(s,k):
-    global cnt
-    cnt +=1
-    if cnt >= 10**6: return 0
-    if s > k: return 0
-    if s == k: return 1
-    if s <= 0: return f(s+3, k)
-    return f(s + 3, k) + f(s + 3, k)
-if f(a[0], a[1]) != 0:
-    print('YES')
-else:
-    print('NO')
+s = input()if len(s) == 9 or len(s) ==10:
+    if s[0] in "АВЕКМНОРСТУХ" and s[1:4].isdigit() and s[4] in 'АВЕКМНОРСТУХ' and s[5] in "АВЕКМНОРСТУХ" and s[6] == "_" and s[7:].isdigit():        print("YES")
+    else:        print("NO")
+else:    print("NO")
